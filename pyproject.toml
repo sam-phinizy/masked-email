@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "masked-email"
+version = "0.1.0"
+description = "A FastMail Masked Email CLI"
+authors = ["Sam Phinizy <83414895+sam-phinizy@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "masked_email"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jmapc = "^0.2.17"
+typer = "^0.9.0"
+pyperclip = "^1.8.2"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+masked-email = 'masked_email.__main__:app'
